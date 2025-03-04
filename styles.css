@@ -15,8 +15,11 @@ body {
 }
 .categorias {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap; /* Permite que los botones se acomoden en varias filas */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 15px; /* Espaciado entre botones */
+    max-width: 600px; /* Ajusta el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
 }
 model-viewer {
     width: 100%;
