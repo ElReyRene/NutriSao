@@ -14,7 +14,13 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const modelo = params.get('modelo');
-        document.getElementById("modelo").src = `models/${modelo}.glb`;
+        
+        if (modelo) {
+            document.getElementById("modelo").setAttribute("src", `models/${modelo}`);
+        } else {
+            document.body.innerHTML += "<p>Error: No se encontró el modelo.</p>";
+        }
     </script>
 </body>
 </html>
+
