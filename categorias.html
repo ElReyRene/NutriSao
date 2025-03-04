@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Categoría</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Selecciona una categoría</h1>
+    <div class="categorias">
+        <button onclick="verModelo('Verduras')">Verduras</button>
+        <button onclick="verModelo('Frutas')">Frutas</button>
+        <button onclick="verModelo('Producto de origen animal')">Producto de origen animal</button>
+        <button onclick="verModelo('Leguminosas')">Leguminosas</button>
+        <button onclick="verModelo('Cereales sin grasa')">Cereales sin grasa</button>
+        <button onclick="verModelo('Cereales con grasa')">Cereales con grasa</button>
+        <button onclick="verModelo('Aceites con proteína')">Aceites con proteína</button>
+        <button onclick="verModelo('Aceites sin proteína')">Aceites sin proteína</button>
+        <button onclick="verModelo('Bebidas alcoholicas')">Bebidas alcoholicas</button>
+        <button onclick="verModelo('Leche')">Leche</button>
+        <button onclick="verModelo('Azúcar')">Azúcar</button>
+    </div>
+
+    <script>
+        function verModelo(categoria) {
+            window.location.href = `modelo.html?modelo=${categoria}`;
+        }
+    </script>
+</body>
+</html>
