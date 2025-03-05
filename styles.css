@@ -4,18 +4,19 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Ocupar toda la pantalla */
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
     background: url('Fondo.png') no-repeat center center fixed;
     background-size: cover; /* Asegura que la imagen cubra todo */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /* ----- Botón en index.html ----- */
 .boton {
     position: absolute;
-    top: 20px; /* Posiciona el botón arriba */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 25px;
@@ -29,16 +30,18 @@ body {
     z-index: 10;
 }
 
-/* ----- Estilos para categorias.html ----- */
+/* ----- Contenedor de Categorías en categorias.html ----- */
 .categorias {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 80px auto 20px; /* Separa las categorías de la parte superior */
     justify-content: center;
+    padding: 20px;
 }
 
+/* ----- Botones de categoría ----- */
 .categorias button {
     display: flex;
     flex-direction: column;
@@ -46,10 +49,18 @@ body {
     border: none;
     background: none;
     cursor: pointer;
+    padding: 10px;
 }
 
+/* ----- Imágenes de categorías ----- */
 .categorias img {
     width: 80px;
     height: 80px;
     object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.categorias img:hover {
+    transform: scale(1.1);
 }
