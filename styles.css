@@ -1,73 +1,55 @@
+/* ----- Estilos Generales ----- */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    position: relative;
-    height: 100vh; /* Ocupa toda la pantalla */
-    overflow: hidden;
+    height: 100vh; /* Ocupar toda la pantalla */
+    background: url('Fondo.png') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenedor {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.fondo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+/* ----- Botón en index.html ----- */
+.boton {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.boton, button {
-    position: absolute;
-    top: 20px; /* Lo mantiene arriba */
+    top: 20px; /* Posiciona el botón arriba */
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 15px 25px;
     background: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    z-index: 1; /* Asegura que esté encima de la imagen */
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 10;
 }
 
+/* ----- Estilos para categorias.html ----- */
 .categorias {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
     justify-content: center;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-.search-container {
+.categorias button {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 10px auto;
-    width: 80%;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-.search-container input {
-    padding: 10px;
-    width: 80%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-container i {
-    margin-right: -30px;
-    color: gray;
-}
-
-model-viewer {
-    width: 100%;
-    height: 500px;
+.categorias img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
