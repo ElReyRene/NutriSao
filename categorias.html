@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,7 @@
     <h1>Selecciona una categoría</h1>
     <div class="categorias"> 
         <button onclick="verModelo('Cucumber.glb')">
-            <img src="images/verduras.png" alt="Verduras" width="30" height="30">
-            Verduras
+            <img src="images/verduras.png" alt="Verduras" width="70" height="70">
         </button>
         <button onclick="verModelo('spinach.glb')">
             <img src="images/frutas.png" alt="Frutas" width="30" height="30">
@@ -51,6 +50,119 @@
         </button>
         <button onclick="verModelo('Azucar.glb')">
             <img src="images/azucar.png" alt="Azucar" width="30" height="30">
+            Azúcar
+        </button>
+    </div>
+
+    <script>
+        function verModelo(categoria) {
+            window.location.href = `modelo.html?modelo=${categoria}`;
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriAr - Selección de Categoría</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            margin-top: 20px;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+            width: 80%;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container i {
+            margin-right: -30px;
+            color: gray;
+        }
+        .categorias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .categorias button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NutriAr</h1>
+        <h2>Hola, buenos días!</h2>
+    </div>
+    <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="¿Qué alimento deseas ver?">
+    </div>
+    <div class="categorias"> 
+        <button onclick="verModelo('Cucumber.glb')">
+            <img src="images/verduras.png" alt="Verduras" width="70" height="70">
+        </button>
+        <button onclick="verModelo('spinach.glb')">
+            <img src="images/frutas.png" alt="Frutas" width="70" height="70">
+            Frutas
+        </button>
+        <button onclick="verModelo('huevo.glb')">
+            <img src="images/producto_de_origen_animal.png" alt="Producto de origen animal" width="70" height="70">
+            Producto de origen animal
+        </button>
+        <button onclick="verModelo('Leguminosas.glb')">
+            <img src="images/leguminosas.png" alt="Leguminosas" width="70" height="70">
+            Leguminosas
+        </button>
+        <button onclick="verModelo('Tortilla.glb')">
+            <img src="images/tortilla.png" alt="Tortilla" width="70" height="70">
+            Cereales
+        </button>
+        <button onclick="verModelo('Cereales_con_grasa.glb')">
+            <img src="images/cereales_con_grasa.png" alt="Cereales con grasa" width="70" height="70">
+            Cereales con grasa
+        </button>
+        <button onclick="verModelo('Aceites_con_proteina.glb')">
+            <img src="images/aceites_con_proteina.png" alt="Aceites con proteína" width="70" height="70">
+            Aceites con proteína
+        </button>
+        <button onclick="verModelo('Aceites_sin_proteína.glb')">
+            <img src="images/aceites_sin_proteina.png" alt="Aceites sin proteína" width="70" height="70">
+            Aceites sin proteína
+        </button>
+        <button onclick="verModelo('Bebidas_alcoholicas.glb')">
+            <img src="images/bebidas_alcoholicas.png" alt="Bebidas alcoholicas" width="70" height="70">
+            Bebidas alcohólicas
+        </button>
+        <button onclick="verModelo('Leche.glb')">
+            <img src="images/leche.png" alt="Leche" width="70" height="70">
+            Leche
+        </button>
+        <button onclick="verModelo('Azucar.glb')">
+            <img src="images/azucar.png" alt="Azúcar" width="70" height="70">
             Azúcar
         </button>
     </div>
