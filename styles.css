@@ -9,13 +9,15 @@ body {
 }
 
 /* ----- Fondo verde en index.html ----- */
+/* ----- Fondo verde en index.html ----- */
 .index-body {
-    .index-body {
-    background: #102F15 url('images/Fondo.png') no-repeat center center fixed;
+    background-color: #102F15;
+    /* background-image: url('images/Fondo.png'); */ /* Comentado */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
 }
-}
-
 /* ----- Estilos del botón con imagen en index.html ----- */
 .boton {
     position: absolute;
@@ -35,6 +37,18 @@ body {
 
 .boton img:hover {
     transform: scale(1.1); /* Efecto al pasar el mouse */
+}
+
+/* Fondo negro para modelo.html */
+.modelo-body {
+    background-color: black;
+    color: white; /* Asegura que el texto sea visible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta el fondo al tamaño de la pantalla */
+    margin: 0;
 }
 
 
