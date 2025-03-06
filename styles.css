@@ -15,7 +15,7 @@ body {
 /* ----- Fondo verde en index.html ----- */
 .index-body {
     background-color: #102F15;
-    background-image: url('images/Fondo.png');
+    /* background-image: url('images/Fondo.png'); */ /* Comentado */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
