@@ -12,15 +12,14 @@ body {
 }
 
 /* ----- Fondo verde en index.html ----- */
-/* ----- Fondo verde en index.html ----- */
 .index-body {
     background-color: #102F15;
-    /* background-image: url('images/Fondo.png'); */ /* Comentado */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
 }
+
 /* ----- Estilos del botón con imagen en index.html ----- */
 .boton {
     position: absolute;
@@ -40,7 +39,7 @@ body {
     transform: scale(1.1); /* Efecto al pasar el mouse */
 }
 
-/* Fondo negro para modelo.html */
+/* ----- Estilos del fondo de modelo.html ----- */
 .modelo-body {
     background-color: black;
     color: white; /* Asegura que el texto sea visible */
