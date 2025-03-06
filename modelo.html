@@ -31,7 +31,16 @@
 <body>
     <h1>Visualizar Modelo 3D</h1>
     <div>
-        <model-viewer id="modelo3d" alt="Modelo 3D" src="" auto-rotate camera-controls background-color="#F0F0F0"></model-viewer>
+        <model-viewer 
+            id="modelo3d" 
+            alt="Modelo 3D" 
+            src="" 
+            auto-rotate 
+            camera-controls 
+            ar 
+            ar-modes="webxr scene-viewer quick-look" 
+            background-color="#F0F0F0">
+        </model-viewer>
     </div>
     <button class="back-button" onclick="window.history.back()">Volver</button>
 
