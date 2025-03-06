@@ -4,50 +4,49 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh;
     overflow: hidden;
 }
 
 /* ----- Fondo verde en index.html ----- */
-/* ----- Fondo verde en index.html ----- */
 .index-body {
     background-color: #102F15;
-    /* background-image: url('images/Fondo.png'); */ /* Comentado */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
 }
-/* ----- Estilos del botón con imagen en index.html ----- */
+
+/* Estilos del botón en index.html */
 .boton {
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: white; /* Color blanco para el encabezado */
-    font-size: 2em; /* Ajusta el tamaño del texto */
+    color: white;
+    font-size: 2em;
     font-family: Arial, sans-serif;
 }
 
 .boton img {
-    width: 150px; /* Ajusta el tamaño según sea necesario */
+    width: 150px;
     height: auto;
     transition: transform 0.3s;
 }
 
 .boton img:hover {
-    transform: scale(1.1); /* Efecto al pasar el mouse */
+    transform: scale(1.1);
 }
 
 /* Fondo negro para modelo.html */
 .modelo-body {
     background-color: black;
-    color: white; /* Asegura que el texto sea visible */
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ajusta el fondo al tamaño de la pantalla */
+    height: 100vh;
     margin: 0;
 }
 

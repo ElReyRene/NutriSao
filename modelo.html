@@ -46,7 +46,7 @@
         // Asignar la fuente del modelo .glb al <model-viewer>
         const modelViewer = document.getElementById('modelo3d');
         if (modelo) {
-            modelViewer.setAttribute('src', `./${modelo}`);
+            modelViewer.setAttribute('src', modelo);
         } else {
             alert('No se ha seleccionado un modelo válido.');
         }
