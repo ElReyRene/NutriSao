@@ -40,6 +40,9 @@
         const urlParams = new URLSearchParams(window.location.search);
         const modelo = urlParams.get('modelo');
 
+        // Asegurarnos de que el modelo se recibe correctamente
+        console.log(`Modelo recibido: ${modelo}`);
+
         // Asignar la fuente del modelo .glb al <model-viewer>
         const modelViewer = document.getElementById('modelo3d');
         if (modelo) {
@@ -50,5 +53,3 @@
     </script>
 </body>
 </html>
-
-
