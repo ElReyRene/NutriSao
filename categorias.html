@@ -6,7 +6,6 @@
     <title>NutriAr - Selección de Categoría</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.js"></script> <!-- Asegúrate de tener este script -->
     <style>
         body {
             text-align: center;
@@ -95,10 +94,10 @@
     </div>
 
     <script>
-        function verModelo(modelo) {
-            window.location.href = `modelo.html?modelo=${modelo}`;
+        function verModelo(categoria) {
+            const categoriaNombre = categoria.split('/')[0]; // Obtiene solo la carpeta
+            window.location.href = `modelo.html?categoria=${categoriaNombre}`;
         }
     </script>
 </body>
-</html>
-             
+</html>             
