@@ -30,62 +30,6 @@ body {
     display: inline-block;
 }
 
-{
-    "Azucar": [
-        "chocolate.glb",
-        "miel.glb",
-        "refresco.glb"
-    ]
-}
-
-{
-    "Bebidas_alcoholicas": [
-        "brandy.glb",
-        "rompope.glb",
-        "vino_tinto.glb"
-    ]
-}
-
-{
-    "Cereal_con_grasa": [
-        "churro.glb",
-        "croissant.glb",
-        "galleta.glb",
-        "palomitas.glb",
-        "papas_de_gagos_fritas.glb"
-    ]
-}
-
-{
-    "Cereal_sin_grasa": [
-        "arroz.glb",
-        "bolillo.glb",
-        "pasta.glb",
-        "potato.glb",
-        "tortilla.glb"
-    ]
-}
-
-{
-    "Frutas": [
-        "guayabas.glb",
-        "mango.glb",
-        "manzana.glb",
-        "papaya.glb",
-        "platano.glb"
-    ]
-}
-
-{
-    "Grasas_con_proteina": [
-        "almond.glb",
-        "nuez.glb",
-        "semillas_de_chia.glb",
-        "papaya.glb",
-        "platano.glb"
-    ]
-}
-
 .boton img {
     width: 150px; /* Ajusta el tamaño según sea necesario */
     height: auto;
