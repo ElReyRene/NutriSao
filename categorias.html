@@ -62,105 +62,21 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriAr - Selección de Categoría</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            margin-top: 20px;
-        }
-        .search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px auto;
-            width: 80%;
-        }
-        .search-container input {
-            padding: 10px;
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .search-container i {
-            margin-right: -30px;
-            color: gray;
-        }
-        .categorias {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .categorias button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>NutriAr</h1>
-        <h2>Hola, buenos días!</h2>
-    </div>
-    <div class="search-container">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="¿Qué alimento deseas ver?">
-    </div>
-    <div class="categorias"> 
-        <button onclick="verModelo('Verduras/calabaza.glb')">
-            <img src="images/verduras.png" alt="Verduras" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Frutas/guayabas.glb')">
-            <img src="images/frutas.png" alt="Frutas" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Producto_de_origen_animal/huevo.glb')">
-            <img src="images/producto_de_origen_animal.png" alt="Producto de origen animal" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Leguminosas/frijoles.glb')">
-            <img src="images/leguminosas.png" alt="Leguminosas" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Cereal_con_grasa/croissant.glb')">
-            <img src="images/cereales_con_grasa.png" alt="Cereales con grasa" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Cereal_sin_grasa/potato.glb')">
-            <img src="images/cereales_sin_grasa.png" alt="Cereales sin grasa" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Grasas_con_proteina/nuez.glb')">
-            <img src="images/aceites_con_proteina.png" alt="Aceites con proteína" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Grasas_sin_proteina/aguacate.glb')">
-            <img src="images/aceites_sin_proteina.png" alt="Aceites sin proteína" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Bebidas_alcoholicas/vino_tinto.glb')">
-            <img src="images/bebidas_alcoholicas.png" alt="Bebidas alcoholicas" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Leche/leche_entera.glb')">
-            <img src="images/leche.png" alt="Leche" width="90" height="90">
-        </button>
-        <button onclick="verModelo('Azucar/chocolate.glb')">
-            <img src="images/azucar.png" alt="Azúcar" width="90" height="90">
-        </button>
-    </div>
+<script>
+    function verModelos(carpeta) {
+        window.location.href = `modelo.html?categoria=${carpeta}`;
+    }
+</script>
 
-    <script>
-        function verModelo(categoria) {
-            window.location.href = `modelo.html?modelo=${categoria}`;
-        }
-    </script>
-</body>
-</html>
+<div class="categorias"> 
+    <button onclick="verModelos('Verduras')">
+        <img src="images/verduras.png" alt="Verduras" width="90" height="90">
+    </button>
+    <button onclick="verModelos('Frutas')">
+        <img src="images/frutas.png" alt="Frutas" width="90" height="90">
+    </button>
+    <button onclick="verModelos('Producto_de_origen_animal')">
+        <img src="images/producto_de_origen_animal.png" alt="Producto de origen animal" width="90" height="90">
+    </button>
+</div>
+

@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo 3D</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Modelo 3D</h1>
-    <model-viewer id="modelo" src="" ar auto-rotate camera-controls></model-viewer>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const categoria = params.get('categoria');
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const modelo = params.get('modelo');
-        
-        if (modelo) {
-            document.getElementById("modelo").setAttribute("src", `models/${modelo}`);
-        } else {
-            document.body.innerHTML += "<p>Error: No se encontró el modelo.</p>";
-        }
-    </script>
-</body>
-</html>
+    if (categoria) {
+        fetch(`models/${categoria}/lista.json`)
+            .then(response => response.json())
+            .then(data => {
+                const modelosContainer = document.getElementById("modelos-container");
+                data.modelos.forEach(modelo => {
+                    const modelViewer = document.createElement("model-viewer");
+                    modelViewer.setAttribute("src", `models/${categoria}/${modelo}`);
+                    modelViewer.setAttribute("ar", "");
+                    modelViewer.setAttribute("auto-rotate", "");
+                    modelViewer.setAttribute("camera-controls", "");
+                    modelViewer.setAttribute("style", "width: 300px; height: 300px; margin: 10px;");
+                    modelosContainer.appendChild(modelViewer);
+                });
+            })
+            .catch(error => {
+                document.body.innerHTML += `<p>Error: No se pudieron cargar los modelos de la categoría ${categoria}.</p>`;
+            });
+    } else {
+        document.body.innerHTML += "<p>Error: No se encontró la categoría.</p>";
+    }
+</script>
+
 

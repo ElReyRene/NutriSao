@@ -1,0 +1,9 @@
+{
+    "modelos": [
+        "bistec_de_res.glb",
+        "huevo.glb",
+        "jamon.glb",
+        "pechuga_de_pollo.glb",
+        "queso_oaxaca.glb"
+    ]
+}
