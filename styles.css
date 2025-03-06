@@ -11,44 +11,43 @@ body {
     justify-content: center;
 }
 
-/* ----- Fondo verde en index.html ----- */
-.index-body {
-    background-color: #102F15;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-/* ----- Estilos del botón con imagen en index.html ----- */
-.boton {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-}
-
-.boton img {
-    width: 150px; /* Ajusta el tamaño según sea necesario */
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.boton img:hover {
-    transform: scale(1.1); /* Efecto al pasar el mouse */
-}
-
-/* ----- Estilos del fondo de modelo.html ----- */
+/* ----- Fondo negro en modelo.html ----- */
 .modelo-body {
-    background-color: black;
-    color: white; /* Asegura que el texto sea visible */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco para que se vea en el fondo negro */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh; /* Ajusta el fondo al tamaño de la pantalla */
     margin: 0;
+}
+
+/* ----- Estilos del encabezado en modelo.html ----- */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Color blanco para el encabezado */
+    font-size: 2em; /* Ajusta el tamaño del texto */
+    font-family: Arial, sans-serif;
+}
+
+/* ----- Estilos para el contenedor de los modelos ----- */
+#modelos-container {
+    width: 100%;
+    height: 80vh; /* Ajusta el tamaño del área donde se cargará el modelo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- Modelo 3D (Model Viewer) ----- */
+model-viewer {
+    width: 80%; /* Ajusta el tamaño del modelo */
+    height: 80%; /* Ajusta el tamaño del modelo */
+    margin-top: 20px;
 }
 
 
