@@ -1,29 +1,26 @@
-<div id="modelos-container"></div>
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const categoria = params.get('categoria');
+<body class="modelo-body">
+    <div id="modelos-container"></div>
 
-    if (categoria) {
-        fetch(`models/${categoria}/lista.json`)
-            .then(response => response.json())
-            .then(data => {
-                const modelosContainer = document.getElementById("modelos-container");
-                data.modelos.forEach(modelo => {
-                    const modelViewer = document.createElement("model-viewer");
-                    modelViewer.setAttribute("src", `models/${categoria}/${modelo}`);
-                    modelViewer.setAttribute("ar", "");
-                    modelViewer.setAttribute("auto-rotate", "");
-                    modelViewer.setAttribute("camera-controls", "");
-                    modelViewer.setAttribute("style", "width: 300px; height: 300px; margin: 10px;");
-                    modelosContainer.appendChild(modelViewer);
-                });
-            })
-            .catch(error => {
-                document.body.innerHTML += `<p>Error: No se pudieron cargar los modelos de la categoría ${categoria}.</p>`;
-            });
-    } else {
-        document.body.innerHTML += "<p>Error: No se encontró la categoría.</p>";
-    }
-</script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const modelo = params.get('modelo'); // Obtener el modelo específico
+
+        if (modelo) {
+            const modelosContainer = document.getElementById("modelos-container");
+
+            const modelViewer = document.createElement("model-viewer");
+            modelViewer.setAttribute("src", `models/${modelo}`);
+            modelViewer.setAttribute("ar", "");
+            modelViewer.setAttribute("auto-rotate", "");
+            modelViewer.setAttribute("camera-controls", "");
+            modelViewer.setAttribute("style", "width: 300px; height: 300px; margin: 10px;");
+
+            modelosContainer.appendChild(modelViewer);
+        } else {
+            document.body.innerHTML += "<p>Error: No se encontró el modelo.</p>";
+        }
+    </script>
+</body>
+
 
 
