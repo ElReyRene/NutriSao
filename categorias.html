@@ -95,7 +95,8 @@
 
     <script>
         function verModelo(categoria) {
-            window.location.href = `modelo.html?categoria=${categoria}`;
+            const categoriaNombre = categoria.split('/')[0]; // Obtiene solo la carpeta
+            window.location.href = `modelo.html?categoria=${categoriaNombre}`;
         }
     </script>
 </body>
